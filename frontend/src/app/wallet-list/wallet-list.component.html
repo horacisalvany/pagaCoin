@@ -1,0 +1,54 @@
+
+<div class="row">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="row">
+      <button class="btn btn-success" type="submit" [disabled]="!f.valid">
+            {{ transCreated ? 'Commit Transfer' : 'Create Transfer' }}
+      </button>
+      <div class="alert alert-warning" #alertWarning hidden=true>
+        <strong>Warning!</strong>
+      </div>
+      <div class="alert alert-success" #alertSuccess hidden=true>
+        <strong>Success!</strong> The transfer has been executed
+      </div>
+      <div class="alert alert-info" #alertInfo hidden=true>
+        <strong>Info!</strong> The transfer has been created. To make it effective, please click "Commit Transfer"
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-5">
+        <hr />
+        Wallet source
+        <p>
+          <select required name="selectSource" [(ngModel)] = "selectedSourceOption" class="form-control" id="selectSource" (change)="onChangeSource()">
+            <option [value]="wallet.id" *ngFor="let wallet of wallets">{{wallet.id}}</option>
+          </select>
+          </p>
+      </div>
+      <div class="col-lg-5">
+        <hr />
+        Wallet destination
+        <p>
+          <select required name="selectDestination" [(ngModel)] = "selectedDestinationOption" class="form-control" id="selectDestination">
+            <option [value]="wallet.id" *ngFor="let wallet of walletsDestination">{{wallet.id}}</option>
+          </select>
+          </p>
+      </div>
+      <div class="col-lg-2">
+        <hr />
+        Amount (€)
+        <p>
+          <input
+          type="number"
+          id="amount"
+          class="form-control"
+          [(ngModel)]="amount"
+          name="amount"
+          required
+          pattern="^[1-9]+[0-9]*$"
+          >
+          </p>
+      </div>
+    </div>
+    </form>
+</div>

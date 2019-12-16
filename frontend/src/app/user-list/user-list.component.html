@@ -1,0 +1,15 @@
+
+<div class="row">
+  <div class="col-lg-5">
+    <hr />
+    <app-user-item
+      *ngFor="let user of users; let id = index"
+      [user]="user"
+      [index]="id"
+    >
+    </app-user-item>
+  </div>
+  <div class="col-lg-7">
+    <router-outlet></router-outlet>
+  </div>
+</div>
