@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "3fd9d793-32ef-4a2d-a36a-97e76d4b52ca",
+		"name": "api-pagaCoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUserPerName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user/name/John",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"name",
+						"John"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserPerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user/name/John",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"name",
+						"John"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWalletsPerUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user/wallets/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"wallets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllWallets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postTransfer7",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"source\": {\r\n\t\t\"id\": 3, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"Bob\"\r\n\t\t}\r\n\t},\r\n\t\"destination\": {\r\n\t\t\"id\": 4, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"John\"\r\n\t\t}\t\r\n\t},\r\n\t\"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postTransfer8",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"source\": {\r\n\t\t\"id\": 3, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"Bob\"\r\n\t\t}\r\n\t},\r\n\t\"destination\": {\r\n\t\t\"id\": 4, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"John\"\r\n\t\t}\t\r\n\t},\r\n\t\"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putCommitTransfer7",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 8,\r\n\t\"source\": {\r\n\t\t\"id\": 3,\r\n\t\t\"balance\": 10, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"Bob\"\r\n\t\t}\r\n\t},\r\n\t\"destination\": {\r\n\t\t\"id\": 4, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"John\"\r\n\t\t}\t\r\n\t},\r\n\t\"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/transfer/commit/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"transfer",
+						"commit",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putCommitTransfer8",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 7,\r\n\t\"source\": {\r\n\t\t\"id\": 3,\r\n\t\t\"balance\": 10, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"Bob\"\r\n\t\t}\r\n\t},\r\n\t\"destination\": {\r\n\t\t\"id\": 4, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"John\"\r\n\t\t}\t\r\n\t},\r\n\t\"amount\": 10,\r\n\t\"state\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/transfer/commit/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"transfer",
+						"commit",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putCommitTransfer10",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 10,\r\n\t\"source\": {\r\n\t\t\"id\": 3,\r\n\t\t\"balance\": 10, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"Bob\"\r\n\t\t}\r\n\t},\r\n\t\"destination\": {\r\n\t\t\"id\": 4, \r\n\t\t\"balance\": 0, \r\n\t\t\"holder\": {\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"John\"\r\n\t\t}\t\r\n\t},\r\n\t\"amount\": 10,\r\n\t\"state\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/transfer/commit/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"transfer",
+						"commit",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
