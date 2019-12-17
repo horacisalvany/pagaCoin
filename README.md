@@ -33,6 +33,10 @@ when this is completed, then
 npm install -g @angular/cli
 ```
 
+```
+npm install --save bootstrap@3
+```
+
 now we have installed Angular in our machine.
 
 For Backend
