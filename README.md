@@ -68,9 +68,9 @@ Once finished, we have running Angular part in http://localhost:4200/
 
 For Spring-Boot part:
 
-Open with Eclipse...
+Open Eclipse...
 ```
-Import project -> backendfolder of the project -> as Maven Project 
+Import project -> backend folder of the project -> as Maven Project 
 ```
 Before next action, check that you have installed on your IDE Java JDK 1.8, otherwise you will get error when you try to download all depenendencies!
 ```
