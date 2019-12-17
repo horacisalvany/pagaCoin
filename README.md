@@ -80,7 +80,23 @@ Right click on pagaCoin/backend/src/main/java/api/SpringBootWebApplication.java,
 Run as -> Java application
 ```
 Once finished, Eclipse deploy in local (in a Apache Tomcat embbeded in Eclipse).
-Our API is listenning in http://localhost:8081/
+Our API is listenning in http://localhost:8081/.
+
+## Testing
+There is a small battery of UnitTesting.
+
+```
+Run your backend application
+```
+
+```
+Right click the project on Eclipse -> Junit Test
+```
+
+Apart, there is a collection calls for Postman to test the api
+```
+Import collection in Postman this file -> backend/src/test/resources/api-pagaCoin.postman_collection.json
+```
 ## Built With
 
 * [NPM](https://www.npmjs.com/) - Dependency Management of nodeJS
