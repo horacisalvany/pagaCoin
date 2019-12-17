@@ -51,7 +51,8 @@ now we have installed Eclipse
 ## Deployment
 
 The easiest way to try this application is deploying both parts in local.
-If not, we have to build both parts and deploy it in a server.
+If not, we have to build both parts and deploy it in a server. For Angulare part generate dist folder and for Backend a WAR file.
+
 For Angular part:
 ```
 open cmd/terminal in frontend directory of the project (check you can run node)
