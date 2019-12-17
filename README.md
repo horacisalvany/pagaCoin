@@ -2,7 +2,7 @@
 
 This app is a small project for a internal tool to help admin users to transfer PagaCoins between internal user wallets and see their transactions.
 
-This app consists of backend and frontend parts. Backend is an API REST build with SpringBoot framework. The Frontend is little user interface to interact made with Angular.
+This app consists of backend and frontend parts. Backend is an API REST build with SpringBoot framework. The Frontend is a little user interface to interact made with Angular.
 
 ## Getting Started
 
