@@ -46,10 +46,11 @@ now we have installed Eclipse
 
 ## Deployment
 
-The easiest way to try this application is deploying both parts in local. 
+The easiest way to try this application is deploying both parts in local.
+If not, we have to build both parts and deploy it in a server.
 For Angular part:
 ```
-go to the root directory of the project (check you can run node)
+open cmd/terminal in frontend directory of the project (check you can run node)
 ```
 
 ```
@@ -60,18 +61,23 @@ npm start
 Once finished, we have running Angular part in http://localhost:4200/
 
 For Spring-Boot part:
+
+Open with Eclipse...
 ```
-Open with Eclipse the backend folder as Maven Project 
+Import project -> backendfolder of the project -> as Maven Project 
 ```
+Before next action, check that you have installed on your IDE Java JDK 1.8, otherwise you will get error when you try to download all depenendencies!
 ```
-Right click on project, Run as > Maven install
+Right click on project, Run as -> Maven install
 ```
 wait until we have downloaded all dependencies
 ```
-Right click on project, Maven > Update Project
+//Just do it if your IDE does not detect new changes
+Right click on project, Maven -> Update Project
 ```
 ```
-Right click on SpringBootWebApplication, Run as > Java application
+Right click on pagaCoin/backend/src/main/java/api/SpringBootWebApplication.java, 
+Run as -> Java application
 ```
 Once finished, Eclipse deploy in local (in a Apache Tomcat embbeded in Eclipse).
 Our API is listenning in http://localhost:8081/
