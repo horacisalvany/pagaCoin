@@ -103,6 +103,7 @@ Apart, there is a collection calls for Postman to test the api
 ```
 Import collection in Postman this file -> backend/src/test/resources/api-pagaCoin.postman_collection.json
 ```
+! Atention cause the ids of wallets changes for every execution, so you MUST CHANGE ID of Wallets to run the collection!
 ## Built With
 
 * [NPM](https://www.npmjs.com/) - Dependency Management of nodeJS
