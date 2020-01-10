@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import api.core.error.UserIdMismatchException;
 import api.core.error.UserNotFoundException;
 import api.model.User;
-import api.model.Wallet;
 import api.repo.UserRepository;
 
 @RestController
@@ -57,15 +56,6 @@ public class UserController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public User create(@RequestBody User user) {
 		return userRepository.save(user);
-	}
-
-	@GetMapping("/wallets/{userId}")
-	public List<Wallet> getWallets(@PathVariable long userId) {
-		try {
-			return userRepository.findById(userId).getWallets();
-		} catch (RuntimeException e) {
-			throw new UserNotFoundException("User does not exist with this id: " + userId, e);
-		}
 	}
 
 	/*
