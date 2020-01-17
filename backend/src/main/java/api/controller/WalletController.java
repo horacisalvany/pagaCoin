@@ -30,9 +30,6 @@ public class WalletController {
 	public List<Wallet> getWallets(@RequestParam(name = "user_id", required = false) String userId) {
 		try {
 			List<Wallet> wallets = (List<Wallet>) walletRepository.findAll();
-			if (userId == null)
-				return wallets;
-
 			Long userIdParsed = Long.parseLong(userId);
 			wallets = wallets.stream().filter(wallet -> wallet.getHolder().getId().equals(userIdParsed))
 					.collect(Collectors.toList());
