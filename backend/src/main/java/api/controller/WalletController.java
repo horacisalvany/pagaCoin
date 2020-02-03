@@ -26,6 +26,10 @@ public class WalletController {
 	private WalletRepository walletRepository;
 
 	@GetMapping
+	public Iterable<?> findAll() {
+		return walletRepository.findAll();
+	}
+	
 	@ResponseBody
 	public List<Wallet> getWallets(@RequestParam(name = "user_id", required = false) String userId) {
 		try {
