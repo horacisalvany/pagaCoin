@@ -20,7 +20,7 @@ import api.repo.WalletRepository;
 
 @RestController
 @RequestMapping("/api/wallet")
-public class WalletController {
+class WalletController {
 
 	@Autowired
 	private WalletRepository walletRepository;
@@ -29,7 +29,7 @@ public class WalletController {
 	public Iterable<?> findAll() {
 		return walletRepository.findAll();
 	}
-	
+
 	@ResponseBody
 	public List<Wallet> getWallets(@RequestParam(name = "user_id", required = false) String userId) {
 		try {

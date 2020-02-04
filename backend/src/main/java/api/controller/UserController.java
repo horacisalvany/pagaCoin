@@ -19,7 +19,7 @@ import api.repo.UserRepository;
 
 @RestController
 @RequestMapping("/api/user")
-public class UserController {
+class UserController {
 
 	@Autowired
 	private UserRepository userRepository;

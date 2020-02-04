@@ -22,7 +22,7 @@ import api.service.WalletService;
 
 @RestController
 @RequestMapping("/api/transfer")
-public class TranferController {
+class TranferController {
 
 	@Autowired
 	private TransferRepository transferRepository;
