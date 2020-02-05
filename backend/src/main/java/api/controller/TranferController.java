@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import api.core.error.MyResourceNotFoundException;
 import api.core.error.TransferIdMismatchException;
-import api.core.error.TransferNotFoundException;
 import api.core.error.TransferNotPendingException;
 import api.core.error.TransferNotPositiveException;
 import api.model.Transfer;
@@ -38,7 +38,7 @@ class TranferController {
 	@GetMapping("/{id}")
 	public Transfer findById(@PathVariable Long id) {
 		return transferRepository.findById(id).orElseThrow(() -> {
-			throw new TransferNotFoundException("Transfer does not exist with this id: " + id);
+			throw new MyResourceNotFoundException("Transfer does not exist with this id: " + id);
 		});
 	}
 
@@ -57,7 +57,7 @@ class TranferController {
 	@PutMapping("/commit/{id}")
 	public Transfer commitTransfer(@RequestBody Transfer transferRequest, @PathVariable Long id) {
 		Transfer transfer = transferRepository.findById(id).orElseThrow(
-				() -> new TransferNotFoundException("No transfer found with this id pass as param: " + id));
+				() -> new MyResourceNotFoundException("No transfer found with this id pass as param: " + id));
 		if (transfer.getId() != id)
 			throw new TransferIdMismatchException("Id found in RequestBody does not match with id param");
 

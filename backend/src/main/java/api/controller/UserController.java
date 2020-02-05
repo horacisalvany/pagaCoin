@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import api.core.error.MyResourceNotFoundException;
 import api.core.error.UserIdMismatchException;
-import api.core.error.UserNotFoundException;
 import api.model.User;
 import api.repo.UserRepository;
 
@@ -32,7 +32,7 @@ class UserController {
 	@GetMapping("/{id}")
 	public User findById(@PathVariable Long id) {
 		return userRepository.findById(id).orElseThrow(() -> {
-			throw new UserNotFoundException("User does not exist with this id: " + id);
+			throw new MyResourceNotFoundException("User does not exist with this id: " + id);
 		});
 	}
 

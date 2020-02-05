@@ -14,9 +14,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
-	@ExceptionHandler({ UserNotFoundException.class, TransferNotFoundException.class, WalletNotFoundException.class })
+	@ExceptionHandler(MyResourceNotFoundException.class)
 	protected ResponseEntity<Object> handleNotFound(Exception ex, WebRequest request) {
-		return handleExceptionInternal(ex, ex.getLocalizedMessage(), new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+		return handleExceptionInternal(ex, ex, new HttpHeaders(), HttpStatus.NOT_FOUND, request);
 	}
 
 	@ExceptionHandler({ UserIdMismatchException.class, TransferIdMismatchException.class,
