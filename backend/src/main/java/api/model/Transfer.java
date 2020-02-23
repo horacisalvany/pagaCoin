@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import api.state.State;
+
 @Entity
 public class Transfer {
 
@@ -24,14 +26,14 @@ public class Transfer {
 
 	private Long amount;
 
-	@Column(nullable = false, unique = false)
-	private String state;
+	@OneToOne
+	private State state;
 
-	public Transfer(Wallet source, Wallet destination, long amount, String state) {
+	public Transfer(Wallet source, Wallet destination, long amount) {
 		this.source = source;
 		this.destination = destination;
 		this.amount = amount;
-		this.state = state;
+		// this.state = new ReadyState(this);
 	}
 
 	protected Transfer() {
@@ -61,11 +63,11 @@ public class Transfer {
 		this.amount = amount;
 	}
 
-	public String getState() {
+	public State getState() {
 		return state;
 	}
 
-	public void setState(String state) {
+	public void changeState(State state) {
 		this.state = state;
 	}
 

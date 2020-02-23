@@ -49,7 +49,7 @@ class TranferController {
 			throw new TransferNotPositiveException("A transfer must be a positive number amount");
 		}
 		// Anyway, when a transfer is created, must be in "Pending" State
-		transfer.setState("pending");
+		transfer.getState().onPending();
 		return transferRepository.save(transfer);
 	}
 
@@ -70,7 +70,7 @@ class TranferController {
 		walletService.transfer(transfer.getSource().getId(), transfer.getDestination().getId(), transfer.getAmount());
 
 		// Anyway, when a transfer is created, must be in "completed" State
-		transfer.setState("completed");
+		transfer.getState().onCompleted();
 		return transferRepository.save(transfer);
 	}
 }

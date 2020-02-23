@@ -61,7 +61,10 @@ public class SpringBootWebApplication {
 			userRepository.save(bob);
 			userRepository.save(john);
 
-			Transfer transfer = new Transfer(wallet1, wallet2, 10L, "pending");
+			// State state;
+			Transfer transfer = new Transfer(wallet1, wallet2, 10L);
+			// TODO: delete this instiante of state
+			// state = new ReadyState(transfer);
 			transferRepository.save(transfer);
 
 			// fetch all users

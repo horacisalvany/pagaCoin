@@ -1,6 +1,5 @@
 package api;
 
-import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 import static org.junit.Assert.assertEquals;
 
@@ -52,7 +51,7 @@ public class TransferUnitTest {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	private Transfer createRandomTransfer() {
-		Transfer transfer = new Transfer(null, null, Long.valueOf(randomNumeric(4)), randomAlphabetic(10));
+		Transfer transfer = new Transfer(null, null, Long.valueOf(randomNumeric(4)));
 		return transfer;
 	}
 
