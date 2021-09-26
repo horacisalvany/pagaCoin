@@ -22,7 +22,7 @@ Eclipse (or your favorite Java IDE)
 
 ### Installing
 
-For Angular part
+#### FrontEnd Instalation 
 ```
 Download and install nodeJS
 ```
@@ -39,7 +39,7 @@ npm install --save bootstrap@3
 
 now we have installed Angular in our machine.
 
-For Backend
+#### BackEnd Instalation 
 
 ```
 Download and install Eclipse Java (Get Eclipse IDE 2019)
