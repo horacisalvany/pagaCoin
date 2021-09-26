@@ -6,7 +6,7 @@ This app consists of backend and frontend parts. Backend is an API REST build wi
 
 ## Getting Started
 
-For try this application in your local machine, you have to download the whole project and launch  both parts in paralel.
+For run the application in your local machine, you have to download the whole project and launch  both parts in paralel.
 
 ### Prerequisites
 
